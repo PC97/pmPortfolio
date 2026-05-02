@@ -1,294 +1,507 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en" class="scroll-smooth">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1" />
-	<title>Portfolio Pranjil</title>
-	<script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
-	<link rel="stylesheet" href="bower_components/foundation-sites/dist/css/foundation.min.css">
-	<link rel="stylesheet" href="">
-	<script src="bower_components/foundation-sites/dist/js/foundation.min.js" charset="utf-8"></script>
-	<script src="bower_components/normalize-css/normalize.css" charset="utf-8"></script>
-	<script src="bower_components/typed.js/dist/typed.min.js" charset="utf-8"></script>
-	<script src="bower_components/jqcloud2/dist/jqcloud.min.js" charset="utf-8"></script>
-	<link rel="stylesheet" href="bower_components/jqcloud2/dist/jqcloud.min.css">
-	<script src="bower_components/custombox/dist/custombox.min.js"></script>
-	<link href="bower_components/custombox/dist/custombox.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500" rel="stylesheet">
-	<link rel="stylesheet" href="assets/fonts/foundation-icons/foundation-icons.css">
-	<link rel="stylesheet" href="assets/styles/styles.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Pranjil Chaturvedi — Senior Product Manager</title>
+	<meta name="description" content="Pranjil Chaturvedi — Senior Product Manager with 5+ years driving product strategy, growth and customer experience across consumer and AI platforms.">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					fontFamily: {
+						serif: ['Fraunces', 'Georgia', 'serif'],
+						sans: ['Inter', 'system-ui', 'sans-serif']
+					},
+					colors: {
+						ink: '#0E1116',
+						paper: '#FAF8F3',
+						accent: '#B8763E',
+						muted: '#6B6660'
+					}
+				}
+			}
+		}
+	</script>
+	<style>
+		html, body { background: #FAF8F3; color: #0E1116; font-family: 'Inter', system-ui, sans-serif; }
+		.serif, h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; letter-spacing: -0.02em; }
+		.reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
+		.reveal.in { opacity: 1; transform: translateY(0); }
+		.link-u { position: relative; }
+		.link-u::after { content: ''; position: absolute; left: 0; right: 100%; bottom: -2px; height: 1px; background: currentColor; transition: right .3s ease; }
+		.link-u:hover::after { right: 0; }
+		::selection { background: #0E1116; color: #FAF8F3; }
+		.grain::before {
+			content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 1; opacity: .035;
+			background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+		}
+	</style>
 </head>
 
-<body>
+<body class="grain">
 
-	<!-- Responsive Sticky Navigation -->
-	<div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
-	  <button class="menu-icon" type="button" data-toggle></button>
-	  <div class="title-bar-title">Menu</div>
-	</div>
-
-	<div class="top-bar sticky-nav" id="main-menu">
-	  <div class="top-bar-left">
-		<ul class="dropdown menu" data-dropdown-menu>
-		  <li><a href="#about">About</a></li>
-		  <li><a href="#experience">Experience</a></li>
-		  <li><a href="#work">Case Studies</a></li>
-		  <li><a href="#footer-cta">Contact</a></li>
-		</ul>
-	  </div>
-	</div>
-
-	<div class="wrapper">
-		<div class="thin-bar">
+	<!-- Nav -->
+	<nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-paper/75 border-b border-ink/5">
+		<div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+			<a href="#top" class="serif text-base md:text-lg tracking-tight">Pranjil <span class="text-accent">·</span> Chaturvedi</a>
+			<ul class="hidden md:flex gap-8 text-sm text-muted">
+				<li><a href="#chapter-01" class="hover:text-ink transition">Story</a></li>
+				<li><a href="#chapter-02" class="hover:text-ink transition">Journey</a></li>
+				<li><a href="#chapter-03" class="hover:text-ink transition">Work</a></li>
+				<li><a href="#chapter-04" class="hover:text-ink transition">Toolkit</a></li>
+				<li><a href="#chapter-05" class="hover:text-ink transition">Contact</a></li>
+			</ul>
+			<a href="assets/Pranjil Chaturvedi CV.pdf" target="_blank" class="hidden md:inline-block text-sm border border-ink/20 px-4 py-2 hover:border-ink hover:bg-ink hover:text-paper transition">CV ↗</a>
 		</div>
+	</nav>
 
-		<section id="about">
-			<div class="row">
-				<div class="small-12 large-8 large-offset-2 columns text-center">
-					<img class="img-circle" src="" alt="">
-					<div class="details">
-						<h2>Hi, I'm Pranjil. I...<br> <span id="writing-text"><span></h2>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="small-12 column">
-					<div class="cta text-center">
-						<a class="my-button cta-button expand form-button" href="mailto:pranjilc@gmail.com">Get In Touch</a>
-					</div>
-				</div>
-				<div class="small-12 column">
-					<div class="my-arrow-div text-center">
-						<a href="https://github.com/pc97" target="_blank"><i class="fa fa-github-alt fa-2x"></i></a>
-						<a href="https://linkedin.com/in/pranjil" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-					</div>
-				</div>
-			</div>
+	<main id="top" class="relative z-10">
 
+		<!-- CHAPTER 01: HERO -->
+		<section id="chapter-01" class="min-h-screen flex flex-col justify-center px-6 pt-32 pb-20">
+			<div class="max-w-6xl mx-auto w-full">
+				<div class="flex items-center gap-3 text-[11px] tracking-[0.35em] text-muted uppercase mb-10 reveal">
+					<span class="serif text-base normal-case tracking-normal">Ch. 01</span>
+					<span class="w-12 h-px bg-muted/40"></span>
+					<span>Hello</span>
+				</div>
+				<h1 class="serif text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] reveal max-w-5xl">
+					I'm Pranjil — a <em class="text-accent not-italic">senior product manager</em> turning ambiguous problems into experiences customers love.
+				</h1>
+				<p class="mt-8 text-lg md:text-xl text-muted max-w-2xl reveal leading-relaxed">
+					5+ years across product, growth and engineering — from shipping Galaxy devices at Samsung to leading AI hiring platforms today.
+				</p>
+
+				<div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl reveal">
+					<div>
+						<p class="serif text-3xl md:text-4xl">5+</p>
+						<p class="text-xs text-muted mt-1 tracking-wide">years in product</p>
+					</div>
+					<div>
+						<p class="serif text-3xl md:text-4xl">$5M</p>
+						<p class="text-xs text-muted mt-1 tracking-wide">B2B program at Samsung</p>
+					</div>
+					<div>
+						<p class="serif text-3xl md:text-4xl">30%</p>
+						<p class="text-xs text-muted mt-1 tracking-wide">paid conversion lift</p>
+					</div>
+					<div>
+						<p class="serif text-3xl md:text-4xl">1M+</p>
+						<p class="text-xs text-muted mt-1 tracking-wide">jobs onboarded</p>
+					</div>
+				</div>
+
+				<div class="mt-14 flex flex-wrap items-center gap-4 reveal">
+					<a href="#chapter-05" class="bg-ink text-paper px-7 py-3 text-sm tracking-wide hover:bg-accent transition">Get in touch</a>
+					<a href="assets/Pranjil Chaturvedi CV.pdf" target="_blank" class="px-7 py-3 text-sm tracking-wide border border-ink/20 hover:border-ink transition">Download CV</a>
+					<div class="ml-1 flex items-center gap-5">
+						<a href="https://linkedin.com/in/pranjil" target="_blank" class="link-u text-sm text-muted hover:text-ink">LinkedIn ↗</a>
+						<a href="https://github.com/pc97" target="_blank" class="link-u text-sm text-muted hover:text-ink">GitHub ↗</a>
+					</div>
+				</div>
+
+				<a href="#chapter-02" class="mt-20 inline-flex items-center gap-3 text-xs tracking-[0.3em] text-muted uppercase reveal hover:text-ink transition">
+					Continue the story
+					<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14m0 0l-6-6m6 6l6-6"/></svg>
+				</a>
+			</div>
 		</section>
 
-
-		<section id="experience">
-
-			<div class="row column">
-				<div class="small-12">
-					<h2 class="text-center">My Experience</h2>
-					<p class="text-center tag-line">Specialist in need. Generalist at heart.</p>
+		<!-- CHAPTER 02: JOURNEY -->
+		<section id="chapter-02" class="px-6 py-24 md:py-32 border-t border-ink/10">
+			<div class="max-w-6xl mx-auto">
+				<div class="flex items-center gap-3 text-[11px] tracking-[0.35em] text-muted uppercase mb-6 reveal">
+					<span class="serif text-base normal-case tracking-normal">Ch. 02</span>
+					<span class="w-12 h-px bg-muted/40"></span>
+					<span>The Journey</span>
 				</div>
-			</div>
-			<div class="row">
-				
-				<div class="small-12 medium-6 columns text-center experience-topics">
-					<i class="fi-database"></i>
-					<h3>Product Management Intern @ServiceNow</h3>
-					<ul>
-						<li>Market Research</li>
-						<li>Competitive analysis</li>
-						<li>Clients’ pain points</li>
-						<li>User stories</li>
-						<li>EPICs</li>
-						<li>Pricing</li>
-						<li>Product roadmap</li>
-						<li>Performance metrics</li>
-						<li>Cross-collaborations</li>
-					</ul>
-				</div>
-				<div class="small-12 medium-6 columns text-center experience-topics">
-					<i class="fi-star"></i>
-					<h3>Technical Project Manager @SamsungR&amp;D</h3>
-					<ul>
-						<li>Product launches</li>
-						<li>Project Initiation, Planning and Execution</li>
-						<li>Monitoring and Controlling</li>
-						<li>Risk management</li>
-						<li>Stakeholder management</li>
-						<li>Process Improvement</li>
-						<li>Cross-functional teams</li>
-						<li>Agile Scrum methodology</li>
-						<li>Regulatory compliances</li>
-					</ul>
-				</div>
-			</div>
-			<div class="row">
-				 
-				<div class="small-12 medium-6 columns text-center experience-topics">
-					<i class="fi-laptop"></i>
-					<h3>SDE @Samsung R&amp;D</h3>
-					<ul>
-						<li>Android OS development</li>
-						<li>System Architecture</li>
-						<li>Unit and System TCs</li>
-						<li>Automation tool</li>
-						<li>Proof of concept expansion</li>
-					</ul>
-				</div>
-				<div class="small-12 medium-6 columns text-center experience-topics">
-					<i class="fi-star"></i>
-					<h3>Skills</h3>
-					<ul>
-						<li>Python</li>
-						<li>SQL</li>
-						<li>Google Analytics</li>
-						<li>Figma</li>
-						<li>AI for PM</li>
-					</ul>
-				</div>
-			</div>
+				<h2 class="serif text-3xl md:text-5xl mb-16 reveal max-w-3xl leading-tight">From shipping Galaxy devices to leading AI hiring platforms.</h2>
 
-		</section>
+				<ol class="space-y-14 md:space-y-16">
 
-		<section id="work">
-			<h2 class="text-center">Case Studies</h2>
-			<div class="row">
-				<p class="text-center tag-line">Here are some of my projects.</p>
-			</div>
+					<li class="grid md:grid-cols-12 gap-4 md:gap-6 reveal pb-14 md:pb-16 border-b border-ink/10">
+						<div class="md:col-span-3">
+							<p class="text-sm text-accent font-medium tracking-wide">Now · Nov 2025 →</p>
+							<p class="text-sm text-muted mt-1">Delhi</p>
+						</div>
+						<div class="md:col-span-9">
+							<h3 class="serif text-2xl md:text-3xl">Technical Product Manager <span class="text-muted font-sans text-base font-normal">— AVUA AI Hiring</span></h3>
+							<p class="mt-2 text-muted">Leading product roadmap for an AI hiring platform serving B2B and B2C.</p>
+							<ul class="mt-5 space-y-3 text-[15px]">
+								<li class="flex gap-3"><span class="text-accent shrink-0">→</span>Drove 0→1 of contract management platform from concept to launch.</li>
+								<li class="flex gap-3"><span class="text-accent shrink-0">→</span>Partnered with Marketing for a <strong class="font-semibold">30% lift in paid user conversion</strong> via funnel A/B tests and pricing optimisation.</li>
+								<li class="flex gap-3"><span class="text-accent shrink-0">→</span>Built 3rd-party partnerships as a 1→100 growth strategy — onboarded <strong class="font-semibold">1M+ jobs</strong>, 3× site visits.</li>
+							</ul>
+						</div>
+					</li>
 
-            <!--12----------------------------------------------------------------------------------------->
+					<li class="grid md:grid-cols-12 gap-4 md:gap-6 reveal pb-14 md:pb-16 border-b border-ink/10">
+						<div class="md:col-span-3">
+							<p class="text-sm text-accent font-medium tracking-wide">May 2025 — Jan 2026</p>
+							<p class="text-sm text-muted mt-1">Hyderabad</p>
+						</div>
+						<div class="md:col-span-9">
+							<h3 class="serif text-2xl md:text-3xl">Product Manager · Lead Consultant for Google <span class="text-muted font-sans text-base font-normal">— Virtusa</span></h3>
+							<p class="mt-2 text-muted">Owned vision and roadmap for two GenAI LLM-based products.</p>
+							<ul class="mt-5 space-y-3 text-[15px]">
+								<li class="flex gap-3"><span class="text-accent shrink-0">→</span>Directed product strategy by gathering stakeholder input and securing executive buy-in.</li>
+								<li class="flex gap-3"><span class="text-accent shrink-0">→</span>Led KPI analytics dashboard initiative — <strong class="font-semibold">25% faster decision-making</strong> across teams.</li>
+								<li class="flex gap-3"><span class="text-accent shrink-0">→</span>Expanded API-first RAG systems — removed <strong class="font-semibold">3K+ manual hours</strong> and lifted test coverage 30%.</li>
+							</ul>
+						</div>
+					</li>
 
-            <div class="row work-row"> <!-- even -->
-				<div class="small-12 medium-6 columns">
-					<img src="assets/images/1_Saregama.png" alt="">
-				</div>
-				<div class="small-12 medium-5 medium-offset-1 columns">
-					<div class="details details-ftm">
-						<h3>Saregama Business Case Competition (National winners) </h3>
-						<p class="platform">Digitaly transforming Influencer marketing</p>
-						<p>Proposing business plan & go-to-market strategy(GTM) using a Web-portal</p>
-						<a class="my-button" target="_blank" href="assets/Saregama_Anonymous.pdf">Download report</a>
+					<li class="grid md:grid-cols-12 gap-4 md:gap-6 reveal pb-14 md:pb-16 border-b border-ink/10">
+						<div class="md:col-span-3">
+							<p class="text-sm text-accent font-medium tracking-wide">Apr — May 2024</p>
+							<p class="text-sm text-muted mt-1">Bangalore</p>
+						</div>
+						<div class="md:col-span-9">
+							<h3 class="serif text-2xl md:text-3xl">Product Manager · Internship <span class="text-muted font-sans text-base font-normal">— ServiceNow</span></h3>
+							<p class="mt-2 text-muted">SaaS cloud cost optimisation — competitive landscape and MVP scoping.</p>
+							<ul class="mt-5 space-y-3 text-[15px]">
+								<li class="flex gap-3"><span class="text-accent shrink-0">→</span>Sized <strong class="font-semibold">$213M TAM</strong> and identified strategic product directions.</li>
+								<li class="flex gap-3"><span class="text-accent shrink-0">→</span>Benchmarked 2 key competitors; recommended MVP solutions by priority.</li>
+								<li class="flex gap-3"><span class="text-accent shrink-0">→</span>Authored 3 EPICs and 17 user stories with cross-functional teams.</li>
+							</ul>
+						</div>
+					</li>
+
+					<li class="grid md:grid-cols-12 gap-4 md:gap-6 reveal">
+						<div class="md:col-span-3">
+							<p class="text-sm text-accent font-medium tracking-wide">Jun 2019 — Jun 2023</p>
+							<p class="text-sm text-muted mt-1">Noida</p>
+						</div>
+						<div class="md:col-span-9">
+							<h3 class="serif text-2xl md:text-3xl">Product Manager <span class="text-muted font-sans text-base font-normal">— Samsung R&amp;D</span></h3>
+							<p class="mt-2 text-muted">Led 4 launches and 26+ SW upgrades across global markets and telecom operators.</p>
+							<ul class="mt-5 space-y-3 text-[15px]">
+								<li class="flex gap-3"><span class="text-accent shrink-0">→</span>Translated PRDs into delivery roadmaps; managed scope, timelines and KPIs across product cycles.</li>
+								<li class="flex gap-3"><span class="text-accent shrink-0">→</span>Led first-launch testing for <strong class="font-semibold">3 Galaxy devices with Jio</strong> — resolved 100+ Day-1 issues.</li>
+								<li class="flex gap-3"><span class="text-accent shrink-0">→</span>Drove 4G LTE Namaste Wi-Fi rollout at Nepal Door Sanchar — <strong class="font-semibold">10K+ users</strong> impacted nationwide.</li>
+								<li class="flex gap-3"><span class="text-accent shrink-0">→</span>Built an automation tool that saved <strong class="font-semibold">2 person-months</strong> and improved accuracy.</li>
+								<li class="flex gap-3"><span class="text-accent shrink-0">→</span>Won Q1 &amp; Q4 '22 awards for leading <strong class="font-semibold">$5M B2B program</strong>.</li>
+							</ul>
+						</div>
+					</li>
+				</ol>
+
+				<!-- Education -->
+				<div class="mt-24 pt-12 border-t border-ink/10 grid md:grid-cols-2 gap-12 reveal">
+					<div>
+						<p class="text-[11px] tracking-[0.35em] text-muted uppercase mb-3">Education</p>
+						<h4 class="serif text-2xl">IIM Shillong</h4>
+						<p class="text-sm text-muted mt-2">MBA (PGPM) · Score 80% · Jun 2023 – Mar 2025</p>
+						<p class="text-sm text-muted mt-1">Coursework: Product Management · Strategy · Marketing · Pricing</p>
 					</div>
-				</div>
-			</div>
-
-			<div class="row work-row"> <!-- odd -->
-				<div class="small-12 medium-6 medium-push-6 columns">
-					<img src="assets/images/2_BigBasket.png" alt="">
-				</div>
-				<div class="small-12 medium-5 medium-pull-7 columns">
-					<div class="details details-ftm">
-						<h3>Bigbasket App Teardown (National winner)</h3>
-						<p class="platform">Targetting customer Pain Points</p>
-						<p>Detailed app-teardown along with proposed improvements.</p>
-						<a class="my-button" target="_blank" href="assets/BigBasket_Anonymous.pdf">Download report</a>
+					<div>
+						<p class="text-[11px] tracking-[0.35em] text-muted uppercase mb-3">&nbsp;</p>
+						<h4 class="serif text-2xl">J.C. Bose University, YMCA</h4>
+						<p class="text-sm text-muted mt-2">B.E. Computer Science · CGPA 8.2/10 · Jun 2015 – Mar 2019</p>
 					</div>
-				</div>
-			</div>
-			
-			<!--34----------------------------------------------------------------------------------------->
-			<div class="row work-row"> <!-- even -->
-				<div class="small-12 medium-6 columns">
-					<img src="assets/images/3_CultPracto.png" alt="">
-				</div>
-				<div class="small-12 medium-5 medium-offset-1 columns">
-					<div class="details details-ftm">
-						<h3>App Synergy Case Competition</h3>
-						<p class="platform">Merging best of Cult.fit and Practo</p>
-						<p>Analysis of synergies when both apps join forces</p>
-						<a class="my-button" target="_blank" href="assets/CultFit+Practo_ANONYMOUS.pdf">Download report</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="row work-row"> <!-- odd -->
-				<div class="small-12 medium-6 medium-push-6 columns">
-					<img src="assets/images/4_GMaps.png" alt="">
-				</div>
-				<div class="small-12 medium-5 medium-pull-7 columns">
-					<div class="details details-ftm">
-						<h3>Favorite Product (College competition Winner)</h3>
-						<p class="platform">Google Maps Improvement</p>
-						<p>Introduce feature of personalized travel guide</p>
-						<a class="my-button" target="_blank" href="assets/4_GoogleMaps.pdf">Download report</a>
-					</div>
-				</div>
-			</div>
-			
-			<!--56-------------------------------------------------------------------------------------->
-			<div class="row work-row"> <!-- even -->
-				<div class="small-12 medium-6 columns">
-					<img src="assets/images/5_Indigo.png" alt="">
-				</div>
-				<div class="small-12 medium-5 medium-offset-1 columns">
-					<div class="details details-ftm">
-						<h3>Indigo Strategy for CAC</h3>
-						<p class="platform">Customers adopting Indigo website</p>
-						<p>Business strategy for onboarding customers on Indigo website directly for bookings</p>
-						<a class="my-button" target="_blank" href="assets/5_Indigo.pdf">Download report</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="row work-row"> <!-- odd -->
-				<div class="small-12 medium-6 medium-push-6 columns">
-					<img src="assets/images/6_Flipkart.png" alt="">
-				</div>
-				<div class="small-12 medium-5 medium-pull-7 columns">
-					<div class="details details-ftm">
-						<h3>Flipkart Minutes</h3>
-						<p class="platform">Strategize quick commerce</p>
-						<p>Develop strategy for quickcommerce entry  of Flipkart</p>
-						<a class="my-button" target="_blank" href="assets/6_Flipkart.pdf">Download report</a>
-					</div>
-				</div>
-			</div>
-			<!---78------------------------------------------------------------------------------------->
-			<div class="row work-row"> <!-- even -->
-				<div class="small-12 medium-2 columns">
-					<img src="assets/images/help1.png" alt="">
-				</div>
-				<div class="small-12 medium-2 columns">
-					<img src="assets/images/help2.png" alt="">
-				</div>
-				<div class="small-12 medium-2 columns">
-					<img src="assets/images/help3.png" alt="">
-				</div>
-				<div class="small-12 medium-5 medium-offset-1 columns">
-					<div class="details details-ftm">
-						<h3>Help</h3>
-						<p class="platform">Android</p>
-						<p class="icons"><i class="fi-tablet-portrait"></i><i class="fi-mobile"></i><i class="fi-monitor"></i></p>
-						<p>"HELP" app created using Android Studio allows a user to alert his near ones about him being in an uncomfortable situation or some kind of medical emergency.  </p>
-						<a class="my-button" target="_blank" href="https://github.com/PC97/Help-app">See   Project</a>
-					</div>
-				</div>
-			</div>
-
-			
-
-		</section>
-
-		<section id="footer-cta">
-			<h2 class="text-center">Wanna work with me?</h2>
-			<p></p>
-			<div class="row text-center">
-				<div class="small-12 medium-8 medium-offset-2 columns">
-					<p class="text-center">I'm currently available for work.</p>
-				</div>
-				<div class="small-12 columns" id="startButtonDiv">
-					<a class="my-button form-button" href="mailto:pranjilc@gmail.com">Start Now</a>
-				</div>
-				<div class="small-12 columns" id="startButtonDiv">
-					<a class="my-button form-button" href="assets/Pranjil Chaturvedi CV.pdf" >Download My Resume</a>
 				</div>
 			</div>
 		</section>
 
-<!--		<footer id="footer">
-			<div class="row text-center">
-				<div class="small-12 medium-6 medium-offset-3 columns">
-					<p id="logo">TP</p>
+		<!-- CHAPTER 03: WORK -->
+		<section id="chapter-03" class="px-6 py-24 md:py-32 border-t border-ink/10 bg-ink/[0.025]">
+			<div class="max-w-6xl mx-auto">
+				<div class="flex items-center gap-3 text-[11px] tracking-[0.35em] text-muted uppercase mb-6 reveal">
+					<span class="serif text-base normal-case tracking-normal">Ch. 03</span>
+					<span class="w-12 h-px bg-muted/40"></span>
+					<span>Selected Work</span>
+				</div>
+				<h2 class="serif text-3xl md:text-5xl mb-4 reveal max-w-3xl leading-tight">Case studies that earned a seat at the table.</h2>
+				<p class="text-muted max-w-2xl mb-16 reveal text-[15px] leading-relaxed">A mix of national-level competition wins, app teardowns and side builds — each reflects how I think about users, business and trade-offs.</p>
+
+				<div class="grid md:grid-cols-2 gap-x-10 gap-y-16">
+
+					<!-- Saregama -->
+					<article class="reveal group">
+						<a href="assets/Saregama_Anonymous.pdf" target="_blank" class="block">
+							<div class="overflow-hidden bg-ink/5 aspect-[4/3] mb-6">
+								<img src="assets/images/1_Saregama.png" alt="Saregama case study" class="w-full h-full object-cover group-hover:scale-[1.04] transition duration-700">
+							</div>
+							<div class="flex items-baseline gap-3 text-[10px] tracking-[0.25em] text-accent uppercase mb-2">
+								<span>Top 3 of 3,000 teams</span>
+								<span class="text-muted/50">·</span>
+								<span class="text-muted">GTM Strategy</span>
+							</div>
+							<h3 class="serif text-2xl group-hover:text-accent transition">Saregama Business Case</h3>
+							<p class="text-muted mt-2 text-[15px] leading-relaxed">Digitally transforming influencer marketing — a business plan and go-to-market strategy delivered through a web portal.</p>
+							<p class="mt-4 text-sm font-medium link-u inline-block">Read case study →</p>
+						</a>
+					</article>
+
+					<!-- BigBasket -->
+					<article class="reveal group">
+						<a href="assets/BigBasket_Anonymous.pdf" target="_blank" class="block">
+							<div class="overflow-hidden bg-ink/5 aspect-[4/3] mb-6">
+								<img src="assets/images/2_BigBasket.png" alt="BigBasket teardown" class="w-full h-full object-cover group-hover:scale-[1.04] transition duration-700">
+							</div>
+							<div class="flex items-baseline gap-3 text-[10px] tracking-[0.25em] text-accent uppercase mb-2">
+								<span>2nd of 475 teams</span>
+								<span class="text-muted/50">·</span>
+								<span class="text-muted">App Teardown</span>
+							</div>
+							<h3 class="serif text-2xl group-hover:text-accent transition">BigBasket Teardown</h3>
+							<p class="text-muted mt-2 text-[15px] leading-relaxed">Detailed teardown targeting customer pain points, with 1→10 growth features to lift adoption and retention.</p>
+							<p class="mt-4 text-sm font-medium link-u inline-block">Read case study →</p>
+						</a>
+					</article>
+
+					<!-- Cult + Practo -->
+					<article class="reveal group">
+						<a href="assets/CultFit+Practo_ANONYMOUS.pdf" target="_blank" class="block">
+							<div class="overflow-hidden bg-ink/5 aspect-[4/3] mb-6">
+								<img src="assets/images/3_CultPracto.png" alt="Cult + Practo synergy" class="w-full h-full object-cover group-hover:scale-[1.04] transition duration-700">
+							</div>
+							<div class="flex items-baseline gap-3 text-[10px] tracking-[0.25em] text-accent uppercase mb-2">
+								<span>App Synergy</span>
+								<span class="text-muted/50">·</span>
+								<span class="text-muted">Strategy</span>
+							</div>
+							<h3 class="serif text-2xl group-hover:text-accent transition">Cult.fit × Practo</h3>
+							<p class="text-muted mt-2 text-[15px] leading-relaxed">Merging best of both apps — analysis of the synergies and product opportunities when fitness meets healthcare.</p>
+							<p class="mt-4 text-sm font-medium link-u inline-block">Read case study →</p>
+						</a>
+					</article>
+
+					<!-- Google Maps -->
+					<article class="reveal group">
+						<a href="assets/4_GoogleMaps.pdf" target="_blank" class="block">
+							<div class="overflow-hidden bg-ink/5 aspect-[4/3] mb-6">
+								<img src="assets/images/4_GMaps.png" alt="Google Maps feature" class="w-full h-full object-cover group-hover:scale-[1.04] transition duration-700">
+							</div>
+							<div class="flex items-baseline gap-3 text-[10px] tracking-[0.25em] text-accent uppercase mb-2">
+								<span>College Winner</span>
+								<span class="text-muted/50">·</span>
+								<span class="text-muted">Feature Spec</span>
+							</div>
+							<h3 class="serif text-2xl group-hover:text-accent transition">Google Maps · Personalised Travel Guide</h3>
+							<p class="text-muted mt-2 text-[15px] leading-relaxed">Introducing a personalised travel-guide feature inside Maps — built around how people actually plan trips.</p>
+							<p class="mt-4 text-sm font-medium link-u inline-block">Read case study →</p>
+						</a>
+					</article>
+
+					<!-- Indigo -->
+					<article class="reveal group">
+						<a href="assets/5_Indigo.pdf" target="_blank" class="block">
+							<div class="overflow-hidden bg-ink/5 aspect-[4/3] mb-6">
+								<img src="assets/images/5_Indigo.png" alt="Indigo CAC strategy" class="w-full h-full object-cover group-hover:scale-[1.04] transition duration-700">
+							</div>
+							<div class="flex items-baseline gap-3 text-[10px] tracking-[0.25em] text-accent uppercase mb-2">
+								<span>CAC Reduction</span>
+								<span class="text-muted/50">·</span>
+								<span class="text-muted">Growth Strategy</span>
+							</div>
+							<h3 class="serif text-2xl group-hover:text-accent transition">IndiGo · Direct-Booking Strategy</h3>
+							<p class="text-muted mt-2 text-[15px] leading-relaxed">A business strategy for onboarding customers directly on the IndiGo website — reducing CAC and aggregator dependence.</p>
+							<p class="mt-4 text-sm font-medium link-u inline-block">Read case study →</p>
+						</a>
+					</article>
+
+					<!-- Flipkart Minutes -->
+					<article class="reveal group">
+						<a href="assets/6_Flipkart.pdf" target="_blank" class="block">
+							<div class="overflow-hidden bg-ink/5 aspect-[4/3] mb-6">
+								<img src="assets/images/6_Flipkart.png" alt="Flipkart Minutes" class="w-full h-full object-cover group-hover:scale-[1.04] transition duration-700">
+							</div>
+							<div class="flex items-baseline gap-3 text-[10px] tracking-[0.25em] text-accent uppercase mb-2">
+								<span>Quick Commerce</span>
+								<span class="text-muted/50">·</span>
+								<span class="text-muted">GTM</span>
+							</div>
+							<h3 class="serif text-2xl group-hover:text-accent transition">Flipkart Minutes</h3>
+							<p class="text-muted mt-2 text-[15px] leading-relaxed">An entry strategy for Flipkart's quick-commerce play — from positioning to operating model trade-offs.</p>
+							<p class="mt-4 text-sm font-medium link-u inline-block">Read case study →</p>
+						</a>
+					</article>
+
+					<!-- Help app -->
+					<article class="reveal group">
+						<a href="https://github.com/PC97/Help-app" target="_blank" class="block">
+							<div class="overflow-hidden bg-ink/5 aspect-[4/3] mb-6 grid grid-cols-3 gap-1 p-4">
+								<img src="assets/images/help1.png" alt="" class="w-full h-full object-contain">
+								<img src="assets/images/help2.png" alt="" class="w-full h-full object-contain">
+								<img src="assets/images/help3.png" alt="" class="w-full h-full object-contain">
+							</div>
+							<div class="flex items-baseline gap-3 text-[10px] tracking-[0.25em] text-accent uppercase mb-2">
+								<span>Hackathon Winner · 1 of 128</span>
+								<span class="text-muted/50">·</span>
+								<span class="text-muted">Android · 0→1</span>
+							</div>
+							<h3 class="serif text-2xl group-hover:text-accent transition">HELP — SOS Safety App</h3>
+							<p class="text-muted mt-2 text-[15px] leading-relaxed">A user-centric SOS app to alert loved ones in unsafe or medical-emergency situations. Won the HackerEarth Zenith Hackathon.</p>
+							<p class="mt-4 text-sm font-medium link-u inline-block">View on GitHub →</p>
+						</a>
+					</article>
+
+					<!-- Vibe Coded site -->
+					<article class="reveal group">
+						<a href="https://id-preview--d2048015-261e-444b-973c-0d7e99398b90.lovable.app/screener" target="_blank" class="block">
+							<div class="overflow-hidden bg-gradient-to-br from-ink to-ink/80 aspect-[4/3] mb-6 flex items-center justify-center text-paper p-8">
+								<div class="text-center">
+									<p class="serif text-4xl md:text-5xl mb-2">Vibe Coded</p>
+									<p class="text-xs tracking-[0.3em] uppercase text-paper/60">Lovable · Supabase</p>
+								</div>
+							</div>
+							<div class="flex items-baseline gap-3 text-[10px] tracking-[0.25em] text-accent uppercase mb-2">
+								<span>Side Build</span>
+								<span class="text-muted/50">·</span>
+								<span class="text-muted">AI Prototyping</span>
+							</div>
+							<h3 class="serif text-2xl group-hover:text-accent transition">Production-Grade Vibe-Coded Web App</h3>
+							<p class="text-muted mt-2 text-[15px] leading-relaxed">End-to-end web app built using prompts, Lovable and Supabase — proving how PMs can ship production-grade tools without an engineering team.</p>
+							<p class="mt-4 text-sm font-medium link-u inline-block">Visit live site →</p>
+						</a>
+					</article>
+
 				</div>
 			</div>
-		</footer>
--->
+		</section>
 
+		<!-- CHAPTER 04: TOOLKIT -->
+		<section id="chapter-04" class="px-6 py-24 md:py-32 border-t border-ink/10">
+			<div class="max-w-6xl mx-auto">
+				<div class="flex items-center gap-3 text-[11px] tracking-[0.35em] text-muted uppercase mb-6 reveal">
+					<span class="serif text-base normal-case tracking-normal">Ch. 04</span>
+					<span class="w-12 h-px bg-muted/40"></span>
+					<span>The Toolkit</span>
+				</div>
+				<h2 class="serif text-3xl md:text-5xl mb-16 reveal max-w-3xl leading-tight">How I get from problem to product.</h2>
 
-	</div>
-	<script src="assets/scripts/app.js" charset="utf-8"></script>
-	<script>$(document).foundation();</script>
+				<div class="grid md:grid-cols-2 gap-x-12 gap-y-12">
+					<div class="reveal">
+						<p class="text-[11px] tracking-[0.35em] text-accent uppercase mb-4">01 — Product</p>
+						<div class="flex flex-wrap gap-2">
+							<span class="px-3 py-1.5 border border-ink/15 text-sm">Roadmap</span>
+							<span class="px-3 py-1.5 border border-ink/15 text-sm">Growth Strategy</span>
+							<span class="px-3 py-1.5 border border-ink/15 text-sm">PRDs</span>
+							<span class="px-3 py-1.5 border border-ink/15 text-sm">A/B Testing</span>
+							<span class="px-3 py-1.5 border border-ink/15 text-sm">User Research</span>
+							<span class="px-3 py-1.5 border border-ink/15 text-sm">Pricing</span>
+							<span class="px-3 py-1.5 border border-ink/15 text-sm">GTM</span>
+							<span class="px-3 py-1.5 border border-ink/15 text-sm">Market Research</span>
+						</div>
+					</div>
+					<div class="reveal">
+						<p class="text-[11px] tracking-[0.35em] text-accent uppercase mb-4">02 — Growth & Analytics</p>
+						<div class="flex flex-wrap gap-2">
+							<span class="px-3 py-1.5 border border-ink/15 text-sm">SQL</span>
+							<span class="px-3 py-1.5 border border-ink/15 text-sm">Funnel Analysis</span>
+							<span class="px-3 py-1.5 border border-ink/15 text-sm">Google Analytics</span>
+							<span class="px-3 py-1.5 border border-ink/15 text-sm">Experimentation</span>
+							<span class="px-3 py-1.5 border border-ink/15 text-sm">Data-Driven Decisions</span>
+						</div>
+					</div>
+					<div class="reveal">
+						<p class="text-[11px] tracking-[0.35em] text-accent uppercase mb-4">03 — AI & Technology</p>
+						<div class="flex flex-wrap gap-2">
+							<span class="px-3 py-1.5 border border-ink/15 text-sm">RAG Systems</span>
+							<span class="px-3 py-1.5 border border-ink/15 text-sm">Agentic AI</span>
+							<span class="px-3 py-1.5 border border-ink/15 text-sm">AI Prototyping</span>
+							<span class="px-3 py-1.5 border border-ink/15 text-sm">APIs</span>
+							<span class="px-3 py-1.5 border border-ink/15 text-sm">Python</span>
+							<span class="px-3 py-1.5 border border-ink/15 text-sm">React</span>
+							<span class="px-3 py-1.5 border border-ink/15 text-sm">JIRA</span>
+							<span class="px-3 py-1.5 border border-ink/15 text-sm">Figma</span>
+							<span class="px-3 py-1.5 border border-ink/15 text-sm">Miro</span>
+							<span class="px-3 py-1.5 border border-ink/15 text-sm">Excel</span>
+						</div>
+					</div>
+					<div class="reveal">
+						<p class="text-[11px] tracking-[0.35em] text-accent uppercase mb-4">04 — Certifications</p>
+						<ul class="space-y-3 text-[15px]">
+							<li class="flex gap-3"><span class="text-accent">◆</span>Certified Scrum Product Owner (CSPO)</li>
+							<li class="flex gap-3"><span class="text-accent">◆</span>AI for Product Management — Google &amp; Pendo</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Achievements -->
+				<div class="mt-24 pt-12 border-t border-ink/10 reveal">
+					<p class="text-[11px] tracking-[0.35em] text-muted uppercase mb-8">Selected Achievements</p>
+					<div class="grid md:grid-cols-3 gap-8">
+						<div>
+							<p class="serif text-3xl text-accent">3<sup class="text-base">rd</sup></p>
+							<p class="mt-2 text-[15px]">of <strong>3,000 teams</strong> · Saregama Business Case Competition (GTM strategy).</p>
+						</div>
+						<div>
+							<p class="serif text-3xl text-accent">2<sup class="text-base">nd</sup></p>
+							<p class="mt-2 text-[15px]">of <strong>475 teams</strong> · BigBasket product teardown — 1→10 growth features.</p>
+						</div>
+						<div>
+							<p class="serif text-3xl text-accent">1<sup class="text-base">st</sup></p>
+							<p class="mt-2 text-[15px]">of <strong>128 teams</strong> · Zenith Hackathon by HackerEarth — SOS safety app.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CHAPTER 05: CONTACT -->
+		<section id="chapter-05" class="px-6 py-24 md:py-32 border-t border-ink/10 bg-ink text-paper">
+			<div class="max-w-6xl mx-auto">
+				<div class="flex items-center gap-3 text-[11px] tracking-[0.35em] text-paper/60 uppercase mb-6 reveal">
+					<span class="serif text-base normal-case tracking-normal">Ch. 05</span>
+					<span class="w-12 h-px bg-paper/30"></span>
+					<span>Let's Talk</span>
+				</div>
+				<h2 class="serif text-4xl md:text-6xl reveal max-w-4xl leading-tight">If you're hiring for a senior PM who can <em class="text-accent not-italic">own the outcome</em> — let's talk.</h2>
+				<p class="mt-8 text-lg text-paper/70 max-w-2xl reveal leading-relaxed">
+					I'm currently open to senior product roles where strategy, AI and customer obsession meet.
+				</p>
+
+				<div class="mt-12 flex flex-wrap items-center gap-4 reveal">
+					<a href="mailto:pranjilc@gmail.com" class="bg-accent text-ink px-7 py-3 text-sm tracking-wide hover:bg-paper transition">Email me ↗</a>
+					<a href="assets/Pranjil Chaturvedi CV.pdf" target="_blank" class="px-7 py-3 text-sm tracking-wide border border-paper/30 hover:border-paper transition">Download CV</a>
+					<a href="https://linkedin.com/in/pranjil" target="_blank" class="px-7 py-3 text-sm tracking-wide border border-paper/30 hover:border-paper transition">LinkedIn ↗</a>
+				</div>
+
+				<div class="mt-20 pt-10 border-t border-paper/10 grid md:grid-cols-3 gap-8 text-sm reveal">
+					<div>
+						<p class="text-[11px] tracking-[0.35em] text-paper/50 uppercase mb-2">Email</p>
+						<a href="mailto:pranjilc@gmail.com" class="link-u">pranjilc@gmail.com</a>
+					</div>
+					<div>
+						<p class="text-[11px] tracking-[0.35em] text-paper/50 uppercase mb-2">Phone</p>
+						<a href="tel:+918512040212" class="link-u">+91 85120 40212</a>
+					</div>
+					<div>
+						<p class="text-[11px] tracking-[0.35em] text-paper/50 uppercase mb-2">Based in</p>
+						<p>Delhi, India</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="px-6 py-8 border-t border-ink/10 text-sm text-muted relative z-10">
+		<div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-2">
+			<p>© 2026 Pranjil Chaturvedi · All rights reserved</p>
+			<p>Crafted with care · Updated May 2026</p>
+		</div>
+	</footer>
+
+	<script>
+		// Reveal-on-scroll
+		const io = new IntersectionObserver((entries) => {
+			entries.forEach(e => {
+				if (e.isIntersecting) {
+					e.target.classList.add('in');
+					io.unobserve(e.target);
+				}
+			});
+		}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+		document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+	</script>
 </body>
-
 </html>
